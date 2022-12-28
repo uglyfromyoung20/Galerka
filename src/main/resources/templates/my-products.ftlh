@@ -29,7 +29,7 @@
                     <option value="">Город не выбран</option>
 
                     <option value="Москва">Москва</option>
-                    <option value="Красноярск">Самара</option>
+                    <option value="Самара">Самара</option>
                     <option value="Казань">Казань</option>
 
                 </select>

@@ -5,10 +5,7 @@ import com.example.galerka.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 
@@ -38,7 +35,6 @@ public String changePassword(Model model , Principal principal){
     @PostMapping("/change")
     public String changePassword(@ModelAttribute User user , Principal principal){
 userService.changePassword(user , principal);
-        userService.saveUser(user);
         return "redirect:/login";
     }
 

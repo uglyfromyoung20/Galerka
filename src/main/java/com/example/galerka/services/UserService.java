@@ -37,6 +37,7 @@ public class UserService {
  public void changePassword(User user , Principal principal){
        User userToUpdate =  getUserByPrincipal(principal);
 userToUpdate.setPassword(passwordEncoder.encode(user.getPassword()));
+     userRepository.save(userToUpdate);
  }
     public List<User> list() {
         return userRepository.findAll();
